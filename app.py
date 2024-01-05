@@ -4,7 +4,7 @@ import streamlit as st
 
 st.header('Time for :blue[Quiz] :sunglasses:')
 # # Connect to MongoDB
-client = MongoClient("")
+client = MongoClient(os.getenv('mongostr'), serverSelectionTimeoutMS=60000)
 db = client["quiz_db"]
 collection = db["quiz_collection"]
 scores_collection = db["scores_collection"]  # New collection for storing scores
