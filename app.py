@@ -1,6 +1,7 @@
 import json
 from pymongo import MongoClient
 import streamlit as st
+import os
 
 st.header('Time for :blue[Quiz] :sunglasses:')
 # # Connect to MongoDB
